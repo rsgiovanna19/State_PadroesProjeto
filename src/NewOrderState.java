@@ -1,6 +1,8 @@
+//classe para referenciar o estado como novo pedido
+
 public class NewOrderState implements OrderState {
     @Override
-    public void pagar(Order order) {
+    public void pagar(Order order) {      
         System.out.println("Pagamento aprovado.");
         order.setState(new PaidState());
     }

@@ -1,3 +1,5 @@
+//classe referenciando o estado do pedido como pago
+
 public class PaidState implements OrderState {
     @Override
     public void pagar(Order order) {

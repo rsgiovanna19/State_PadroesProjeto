@@ -1,3 +1,5 @@
+//classe referenciando o pedido completo
+
 public class Order {
     private OrderState state;
     private final String id;
@@ -8,23 +10,23 @@ public class Order {
         System.out.println("Pedido " + id + " criado. Estado: " + state.getNome());
     }
 
-    public void pagar() {
+    public void pagar() {   //pagamento
         state.pagar(this);
     }
 
-    public void enviar() {
+    public void enviar() {  //envio
         state.enviar(this);
     }
 
-    public void entregar() {
+    public void entregar() {    //entrega
         state.entregar(this);
     }
 
-    public void cancelar() {
+    public void cancelar() {    //cancelamento
         state.cancelar(this);
     }
 
-    void setState(OrderState state) {
+    void setState(OrderState state) {   //alteração do pedido 
         this.state = state;
         System.out.println("Pedido " + id + " mudou para: " + state.getNome());
     }

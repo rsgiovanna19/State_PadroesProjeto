@@ -1,3 +1,5 @@
+//classe referenciando a entrega do pedido
+
 public class DeliveredState implements OrderState {
     @Override
     public void pagar(Order order) {

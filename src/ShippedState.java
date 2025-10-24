@@ -1,3 +1,5 @@
+//classe referenciando o estado do pedido como enviado
+
 public class ShippedState implements OrderState {
     @Override
     public void pagar(Order order) {
@@ -16,8 +18,8 @@ public class ShippedState implements OrderState {
     }
 
     @Override
-    public void cancelar(Order order) {
-        throw new IllegalStateException("Não é possível cancelar. Seu pedido foi cancelado.");
+    public void cancelar(Order order) { //caso nao seja possivel cancelar pelo pedido ja ter sido enviado
+        throw new IllegalStateException("O pedido foi enviado. Não é possível cancelar.");
     }
 
     @Override

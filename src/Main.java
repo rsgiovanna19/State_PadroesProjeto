@@ -6,7 +6,7 @@ public class Main {
         order.enviar();
         order.entregar();
 
-        //caso for invalido
+        //se o caso for invalido...
         try {
             order.pagar(); //se ja entregue
         } catch (IllegalStateException e) {

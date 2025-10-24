@@ -1,3 +1,5 @@
+//classe referenciando o cancelamento do pedido
+
 public class CancelledState implements OrderState {
     @Override
     public void pagar(Order order) {
